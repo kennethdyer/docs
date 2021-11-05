@@ -17,6 +17,8 @@
 
 .. |tool-binary| replace:: ``mongodump``
 
+.. |tool-opt-uri| replace:: :option:`--uri <mongodump --uri>`
+
 .. include:: /includes/admonition-mac-osx-sierra-restriction.rst
 
 .. include:: /includes/extracts/migration-to-database-tools-mongodump.rst
@@ -429,6 +431,8 @@ Options
    
       You cannot specify both :option:`--host` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 .. option:: --port=<port>
 
@@ -440,6 +444,8 @@ Options
    .. note::
    
       You cannot specify both :option:`--port` and :option:`--uri`.
+
+      .. include:: /includes/srv-uri-requirement.rst
 
 
 .. option:: --ipv6
@@ -552,11 +558,13 @@ Options
    Specifies a username with which to authenticate to a MongoDB database
    that uses authentication. Use in conjunction with the :option:`--password` and
    :option:`--authenticationDatabase` options.
-   
+
    .. note::
    
       You cannot specify both :option:`--username` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst  
+  
 
 .. option:: --password=<password>, -p=<password>
 
@@ -572,6 +580,7 @@ Options
    
       You cannot specify both :option:`--password` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst  
 
 .. option:: --authenticationDatabase=<dbname>
 
@@ -582,6 +591,8 @@ Options
    
       You cannot specify both :option:`--authenticationDatabase` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst  
+ 
    If you do not specify an authentication database, :program:`mongodump`
    assumes that the database specified to export holds the user's credentials.
 
@@ -611,6 +622,8 @@ Options
    
       You cannot specify both :option:`--authenticationMechanism` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst  
+
 
 .. option:: --gssapiServiceName
 
@@ -629,7 +642,6 @@ Options
    not match the hostname resolved by DNS.
    
    This option is available only in MongoDB Enterprise.
-   
 
 
 .. option:: --db=<database>, -d=<database>
@@ -637,10 +649,12 @@ Options
    Specifies a database to backup. If you do not specify a database,
    :binary:`~bin.mongodump` copies all databases in this instance into the dump
    files.
-   
+
    .. note::
     
        You cannot specify both :option:`--db` and :option:`--uri`.
+ 
+      .. include:: /includes/srv-uri-requirement.rst  
 
 
 .. option:: --collection=<collection>, -c=<collection>

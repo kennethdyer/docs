@@ -14,6 +14,10 @@
 
 .. |tool-binary| replace:: ``mongorestore``
 
+.. |tool-program| replace:: :program:`mongorestore`
+
+.. |tool-opt-uri| replace:: :option:`--uri <mongorestore --uri>`
+
 .. include:: /includes/admonition-mac-osx-sierra-restriction.rst
 
 .. include:: /includes/extracts/migration-to-database-tools-mongorestore.rst
@@ -319,6 +323,8 @@ Options
    
       You cannot specify both :option:`--host` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 .. option:: --port=<port>
 
@@ -326,10 +332,13 @@ Options
 
    Specifies the TCP port on which the MongoDB instance listens for
    client connections.
-   
+
    .. note::
    
       You cannot specify both :option:`--port` and :option:`--uri`.
+
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 
 .. option:: --ssl
@@ -437,6 +446,8 @@ Options
    
       You cannot specify both :option:`--username` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 .. option:: --password=<password>, -p=<password>
 
@@ -452,6 +463,8 @@ Options
    
       You cannot specify both :option:`--password` and :option:`--uri`.
 
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 .. option:: --authenticationDatabase=<dbname>
 
@@ -461,6 +474,9 @@ Options
    .. note::
    
       You cannot specify both :option:`--authenticationDatabase` and :option:`--uri`.
+
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 
 .. option:: --authenticationMechanism=<name>
@@ -483,6 +499,9 @@ Options
    .. note::
    
       You cannot specify both :option:`--authenticationMechanism` and :option:`--uri`.
+
+      .. include:: /includes/srv-uri-requirement.rst
+
 
 
 .. option:: --gssapiServiceName=<serviceName>
